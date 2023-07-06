@@ -17,7 +17,7 @@ PyTorch implementation of cross-cultural music transfer learning using auto-tagg
 - [**Carnatic**](https://dunya.compmusic.upf.edu/carnatic/)
 
 ## Models
-- **VGG-ish** : CNN architecture, with multiple layers, that is based on the VGG network, as implemented by [Won et al.](https://arxiv.org/abs/2006.00751)
+- **VGG-ish** : CNN architecture with multiple layers based on the VGG network, as implemented by [Won et al.](https://arxiv.org/abs/2006.00751)
 - **Musicnn** : Music inspired model that uses convolutional layers at its core, [Pons et al.](https://arxiv.org/abs/1711.02520)
 - **Audio Spectrogram Transformer** : Purely attention-based model for audio classification, [Gong et al.](https://arxiv.org/abs/2104.01778)
 
