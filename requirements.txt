@@ -1,0 +1,11 @@
+numpy==1.21.6
+torch==1.13.1
+imblearn==0.0
+matplotlib==3.5.1
+librosa==0.9.1
+tqdm==4.64.1
+torchaudio==0.13.1
+torchvision==0.14.1
+pandas==1.4.0
+timm==0.4.5
+wget==3.2
