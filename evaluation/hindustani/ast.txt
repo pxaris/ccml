@@ -1,0 +1,33 @@
+
+Evaluation of model "ast" on "hindustani" test set:
+ROC-AUC score: 0.830700453276949
+PR-AUC score: 0.5786974449561268
+
+                       precision    recall  f1-score   support
+
+    instrument--Voice       0.98      1.00      0.99       206
+    instrument--Tabla       0.82      0.88      0.85       128
+         form--Khayal       0.70      0.81      0.75        98
+instrument--Harmonium       0.74      0.81      0.78        96
+       tala--Teentaal       0.72      0.27      0.40        84
+  instrument--Tambura       0.81      0.48      0.61        62
+         tala--Ektaal       0.75      0.15      0.25        40
+  instrument--Sarangi       0.00      0.00      0.00        18
+ instrument--Pakhavaj       0.93      0.74      0.82        19
+        form--Dhrupad       1.00      0.83      0.91        18
+       tala--Jhaptaal       0.00      0.00      0.00         9
+         form--Thumri       0.00      0.00      0.00        16
+         form--Bhajan       0.00      0.00      0.00         8
+    instrument--Sitar       1.00      0.67      0.80        12
+       raga--Bhairabi       0.00      0.00      0.00         9
+         form--Tarana       0.00      0.00      0.00         6
+  instrument--Bansuri       0.67      1.00      0.80         2
+   raga--Yaman kalyan       0.00      0.00      0.00         8
+          tala--Rupak       0.00      0.00      0.00         6
+      raga--Bageshree       0.00      0.00      0.00         4
+
+            micro avg       0.84      0.67      0.75       849
+            macro avg       0.46      0.38      0.40       849
+         weighted avg       0.75      0.67      0.69       849
+          samples avg       0.83      0.68      0.71       849
+

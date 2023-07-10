@@ -1,0 +1,33 @@
+
+Evaluation of model "vgg_ish" on "hindustani" test set:
+ROC-AUC score: 0.8477712566124834
+PR-AUC score: 0.6082358689404332
+
+                       precision    recall  f1-score   support
+
+    instrument--Voice       0.98      1.00      0.99       206
+    instrument--Tabla       0.89      0.84      0.87       128
+         form--Khayal       0.79      0.61      0.69        98
+instrument--Harmonium       0.87      0.71      0.78        96
+       tala--Teentaal       0.69      0.42      0.52        84
+  instrument--Tambura       0.89      0.55      0.68        62
+         tala--Ektaal       0.57      0.33      0.41        40
+  instrument--Sarangi       1.00      0.39      0.56        18
+ instrument--Pakhavaj       1.00      0.74      0.85        19
+        form--Dhrupad       1.00      0.83      0.91        18
+       tala--Jhaptaal       0.00      0.00      0.00         9
+         form--Thumri       0.00      0.00      0.00        16
+         form--Bhajan       0.00      0.00      0.00         8
+    instrument--Sitar       1.00      0.92      0.96        12
+       raga--Bhairabi       0.00      0.00      0.00         9
+         form--Tarana       0.00      0.00      0.00         6
+  instrument--Bansuri       1.00      1.00      1.00         2
+   raga--Yaman kalyan       0.00      0.00      0.00         8
+          tala--Rupak       0.00      0.00      0.00         6
+      raga--Bageshree       0.00      0.00      0.00         4
+
+            micro avg       0.89      0.67      0.77       849
+            macro avg       0.53      0.42      0.46       849
+         weighted avg       0.80      0.67      0.73       849
+          samples avg       0.86      0.68      0.73       849
+

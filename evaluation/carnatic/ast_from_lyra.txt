@@ -1,0 +1,33 @@
+
+Evaluation of model "ast_from_lyra" on "carnatic" test set:
+ROC-AUC score: 0.7659994626076435
+PR-AUC score: 0.44519853850964985
+
+                            precision    recall  f1-score   support
+
+         instrument--Voice       0.98      0.99      0.98       432
+        instrument--Violin       0.97      0.99      0.98       437
+     instrument--Mridangam       0.89      0.99      0.94       408
+               form--Kriti       0.71      0.97      0.82       357
+                 tala--adi       0.58      0.75      0.66       276
+        instrument--Ghatam       0.81      0.90      0.85       165
+      instrument--Khanjira       0.95      0.59      0.73        88
+              tala--rupaka       0.50      0.02      0.03        60
+        tala--mishra chapu       0.00      0.00      0.00        30
+form--Varnam - Tana Varnam       0.00      0.00      0.00        36
+             form--Alapana       0.67      0.06      0.11        35
+             form--Pallavi       0.00      0.00      0.00        17
+          raga--ragamalika       0.00      0.00      0.00        14
+        tala--khanda chapu       0.00      0.00      0.00        19
+       instrument--Morsing       1.00      0.29      0.45        17
+               raga--thodi       0.00      0.00      0.00        12
+            form--Thillana       0.00      0.00      0.00        16
+            form--Mangalam       0.00      0.00      0.00        13
+            raga--bhairavi       0.00      0.00      0.00         8
+             raga--kalyani       0.00      0.00      0.00        10
+
+                 micro avg       0.83      0.83      0.83      2450
+                 macro avg       0.40      0.33      0.33      2450
+              weighted avg       0.78      0.83      0.79      2450
+               samples avg       0.82      0.81      0.81      2450
+

@@ -1,0 +1,33 @@
+
+Evaluation of model "vgg_ish_from_magnatagatune" on "carnatic" test set:
+ROC-AUC score: 0.7471391137595497
+PR-AUC score: 0.4274280188964325
+
+                            precision    recall  f1-score   support
+
+         instrument--Voice       0.98      1.00      0.99       432
+        instrument--Violin       0.98      0.99      0.99       437
+     instrument--Mridangam       0.93      1.00      0.96       408
+               form--Kriti       0.72      0.96      0.82       357
+                 tala--adi       0.60      0.70      0.64       276
+        instrument--Ghatam       0.95      0.81      0.88       165
+      instrument--Khanjira       0.91      0.92      0.92        88
+              tala--rupaka       0.00      0.00      0.00        60
+        tala--mishra chapu       0.00      0.00      0.00        30
+form--Varnam - Tana Varnam       0.00      0.00      0.00        36
+             form--Alapana       0.75      0.09      0.15        35
+             form--Pallavi       0.00      0.00      0.00        17
+          raga--ragamalika       0.00      0.00      0.00        14
+        tala--khanda chapu       0.00      0.00      0.00        19
+       instrument--Morsing       1.00      0.82      0.90        17
+               raga--thodi       0.00      0.00      0.00        12
+            form--Thillana       0.00      0.00      0.00        16
+            form--Mangalam       0.00      0.00      0.00        13
+            raga--bhairavi       0.00      0.00      0.00         8
+             raga--kalyani       0.00      0.00      0.00        10
+
+                 micro avg       0.86      0.83      0.85      2450
+                 macro avg       0.39      0.36      0.36      2450
+              weighted avg       0.79      0.83      0.80      2450
+               samples avg       0.86      0.82      0.83      2450
+

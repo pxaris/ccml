@@ -1,0 +1,33 @@
+
+Evaluation of model "musicnn" on "hindustani" test set:
+ROC-AUC score: 0.8471398373980896
+PR-AUC score: 0.6016812818508256
+
+                       precision    recall  f1-score   support
+
+    instrument--Voice       0.96      1.00      0.98       206
+    instrument--Tabla       0.85      0.88      0.86       128
+         form--Khayal       0.70      0.56      0.62        98
+instrument--Harmonium       0.87      0.76      0.81        96
+       tala--Teentaal       0.54      0.23      0.32        84
+  instrument--Tambura       0.80      0.66      0.73        62
+         tala--Ektaal       0.00      0.00      0.00        40
+  instrument--Sarangi       1.00      0.17      0.29        18
+ instrument--Pakhavaj       0.93      0.74      0.82        19
+        form--Dhrupad       1.00      0.83      0.91        18
+       tala--Jhaptaal       0.00      0.00      0.00         9
+         form--Thumri       0.00      0.00      0.00        16
+         form--Bhajan       0.00      0.00      0.00         8
+    instrument--Sitar       1.00      0.75      0.86        12
+       raga--Bhairabi       0.00      0.00      0.00         9
+         form--Tarana       0.00      0.00      0.00         6
+  instrument--Bansuri       1.00      0.50      0.67         2
+   raga--Yaman kalyan       0.00      0.00      0.00         8
+          tala--Rupak       0.00      0.00      0.00         6
+      raga--Bageshree       0.00      0.00      0.00         4
+
+            micro avg       0.86      0.65      0.74       849
+            macro avg       0.48      0.35      0.39       849
+         weighted avg       0.73      0.65      0.67       849
+          samples avg       0.84      0.65      0.70       849
+

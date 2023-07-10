@@ -1,0 +1,33 @@
+
+Evaluation of model "ast_from_magnatagatune_f" on "hindustani" test set:
+ROC-AUC score: 0.7467998790205703
+PR-AUC score: 0.39322976244997304
+
+                       precision    recall  f1-score   support
+
+    instrument--Voice       0.90      1.00      0.94       206
+    instrument--Tabla       0.69      0.82      0.75       128
+         form--Khayal       0.70      0.47      0.56        98
+instrument--Harmonium       0.61      0.31      0.41        96
+       tala--Teentaal       0.00      0.00      0.00        84
+  instrument--Tambura       0.00      0.00      0.00        62
+         tala--Ektaal       0.00      0.00      0.00        40
+  instrument--Sarangi       0.00      0.00      0.00        18
+ instrument--Pakhavaj       0.00      0.00      0.00        19
+        form--Dhrupad       0.00      0.00      0.00        18
+       tala--Jhaptaal       0.00      0.00      0.00         9
+         form--Thumri       0.00      0.00      0.00        16
+         form--Bhajan       0.00      0.00      0.00         8
+    instrument--Sitar       0.00      0.00      0.00        12
+       raga--Bhairabi       0.00      0.00      0.00         9
+         form--Tarana       0.00      0.00      0.00         6
+  instrument--Bansuri       0.00      0.00      0.00         2
+   raga--Yaman kalyan       0.00      0.00      0.00         8
+          tala--Rupak       0.00      0.00      0.00         6
+      raga--Bageshree       0.00      0.00      0.00         4
+
+            micro avg       0.78      0.46      0.57       849
+            macro avg       0.14      0.13      0.13       849
+         weighted avg       0.47      0.46      0.45       849
+          samples avg       0.78      0.48      0.56       849
+

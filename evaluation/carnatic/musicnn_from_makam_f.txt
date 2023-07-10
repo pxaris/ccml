@@ -1,0 +1,33 @@
+
+Evaluation of model "musicnn_from_makam_f" on "carnatic" test set:
+ROC-AUC score: 0.6749939983865967
+PR-AUC score: 0.3535201453664482
+
+                            precision    recall  f1-score   support
+
+         instrument--Voice       0.83      1.00      0.91       432
+        instrument--Violin       0.85      1.00      0.92       437
+     instrument--Mridangam       0.80      1.00      0.89       408
+               form--Kriti       0.68      1.00      0.81       357
+                 tala--adi       0.60      0.71      0.65       276
+        instrument--Ghatam       0.69      0.11      0.19       165
+      instrument--Khanjira       0.00      0.00      0.00        88
+              tala--rupaka       0.00      0.00      0.00        60
+        tala--mishra chapu       0.00      0.00      0.00        30
+form--Varnam - Tana Varnam       0.00      0.00      0.00        36
+             form--Alapana       0.00      0.00      0.00        35
+             form--Pallavi       0.00      0.00      0.00        17
+          raga--ragamalika       0.00      0.00      0.00        14
+        tala--khanda chapu       0.00      0.00      0.00        19
+       instrument--Morsing       0.00      0.00      0.00        17
+               raga--thodi       0.00      0.00      0.00        12
+            form--Thillana       0.00      0.00      0.00        16
+            form--Mangalam       0.00      0.00      0.00        13
+            raga--bhairavi       0.00      0.00      0.00         8
+             raga--kalyani       0.00      0.00      0.00        10
+
+                 micro avg       0.76      0.75      0.76      2450
+                 macro avg       0.22      0.24      0.22      2450
+              weighted avg       0.65      0.75      0.68      2450
+               samples avg       0.76      0.76      0.74      2450
+

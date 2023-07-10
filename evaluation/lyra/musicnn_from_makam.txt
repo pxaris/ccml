@@ -1,0 +1,43 @@
+
+Evaluation of model "musicnn_from_makam" on "lyra" test set:
+ROC-AUC score: 0.7983397133155011
+PR-AUC score: 0.4675881816082299
+
+                         precision    recall  f1-score   support
+
+     instruments--Voice       0.68      0.98      0.81       223
+    genres--Traditional       0.92      0.98      0.95       277
+    instruments--Violin       0.73      0.87      0.79       171
+instruments--Percussion       0.78      0.68      0.73       186
+    instruments--Laouto       0.83      0.74      0.78       141
+    instruments--Guitar       0.71      0.54      0.61       156
+   instruments--Klarino       0.89      0.40      0.55       120
+      genres--Nisiotiko       0.57      0.50      0.53        64
+            place--None       0.89      0.52      0.66        61
+      instruments--Bass       0.68      0.89      0.77        38
+ instruments--Accordion       0.54      0.45      0.49        56
+  instruments--Santouri       0.46      0.44      0.45        39
+         genres--Aegean       0.50      0.27      0.35        30
+      place--Aegean-sea       0.42      0.27      0.33        30
+       genres--Epirotic       1.00      0.10      0.18        30
+          place--Epirus       1.00      0.07      0.12        30
+  instruments--Bouzouki       1.00      0.07      0.14        41
+   genres--Mikrasiatiko       0.00      0.00      0.00        38
+      place--Asia-minor       0.00      0.00      0.00        38
+       genres--Rebetiko       0.00      0.00      0.00        36
+          genres--Laiko       0.00      0.00      0.00         8
+     instruments--Piano       0.00      0.00      0.00         3
+      instruments--Lyra       0.00      0.00      0.00        42
+       instruments--Oud       0.00      0.00      0.00        47
+     genres--Macedonian       0.00      0.00      0.00        15
+       place--Macedonia       0.00      0.00      0.00        15
+  genres--Peloponnesian       0.00      0.00      0.00        10
+     place--Peloponnese       0.00      0.00      0.00        10
+  instruments--Mandolin       0.00      0.00      0.00        10
+  instruments--Kanonaki       0.00      0.00      0.00        31
+
+              micro avg       0.75      0.58      0.66      1996
+              macro avg       0.42      0.29      0.31      1996
+           weighted avg       0.65      0.58      0.59      1996
+            samples avg       0.77      0.60      0.66      1996
+

@@ -1,0 +1,33 @@
+
+Evaluation of model "vgg_ish" on "fma" test set:
+ROC-AUC score: 0.8889191768755351
+PR-AUC score: 0.49498957186376424
+
+                    precision    recall  f1-score   support
+
+              Rock       0.84      0.81      0.83      1396
+        Electronic       0.80      0.70      0.74      1259
+              Punk       0.69      0.56      0.62       649
+      Experimental       0.66      0.30      0.42       441
+           Hip-Hop       0.91      0.70      0.79       446
+              Folk       0.78      0.46      0.58       325
+            Garage       0.68      0.28      0.40       280
+      Instrumental       0.56      0.25      0.34       275
+        Indie-Rock       0.50      0.01      0.01       263
+               Pop       0.00      0.00      0.00       247
+        Chip Music       0.83      0.69      0.75       181
+Ambient Electronic       0.29      0.03      0.06       203
+     International       0.91      0.52      0.66       224
+               IDM       0.00      0.00      0.00       192
+            Techno       0.46      0.04      0.08       145
+         Downtempo       0.00      0.00      0.00       159
+        Soundtrack       0.00      0.00      0.00       175
+          Chiptune       0.72      0.63      0.67       123
+             House       0.00      0.00      0.00       132
+          Hardcore       0.87      0.28      0.42       118
+
+         micro avg       0.78      0.48      0.60      7233
+         macro avg       0.52      0.31      0.37      7233
+      weighted avg       0.65      0.48      0.53      7233
+       samples avg       0.53      0.44      0.47      7233
+

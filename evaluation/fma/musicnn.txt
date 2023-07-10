@@ -1,0 +1,33 @@
+
+Evaluation of model "musicnn" on "fma" test set:
+ROC-AUC score: 0.8766522199470094
+PR-AUC score: 0.4473907046662843
+
+                    precision    recall  f1-score   support
+
+              Rock       0.88      0.73      0.80      1396
+        Electronic       0.83      0.63      0.71      1259
+              Punk       0.69      0.34      0.46       649
+      Experimental       0.69      0.15      0.25       441
+           Hip-Hop       0.83      0.69      0.76       446
+              Folk       0.83      0.28      0.42       325
+            Garage       0.00      0.00      0.00       280
+      Instrumental       0.95      0.07      0.12       275
+        Indie-Rock       0.00      0.00      0.00       263
+               Pop       0.00      0.00      0.00       247
+        Chip Music       0.91      0.54      0.68       181
+Ambient Electronic       0.00      0.00      0.00       203
+     International       0.96      0.20      0.33       224
+               IDM       0.00      0.00      0.00       192
+            Techno       1.00      0.01      0.01       145
+         Downtempo       0.00      0.00      0.00       159
+        Soundtrack       0.00      0.00      0.00       175
+          Chiptune       0.77      0.41      0.53       123
+             House       0.00      0.00      0.00       132
+          Hardcore       1.00      0.01      0.02       118
+
+         micro avg       0.83      0.38      0.52      7233
+         macro avg       0.52      0.20      0.25      7233
+      weighted avg       0.65      0.38      0.44      7233
+       samples avg       0.46      0.35      0.38      7233
+

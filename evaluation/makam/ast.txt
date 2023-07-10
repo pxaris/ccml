@@ -1,0 +1,43 @@
+
+Evaluation of model "ast" on "makam" test set:
+ROC-AUC score: 0.8643967847924261
+PR-AUC score: 0.5669583415353981
+
+                                  precision    recall  f1-score   support
+
+               instrument--Voice       0.98      0.97      0.98       650
+               instrument--Kanun       0.96      0.91      0.94       321
+              instrument--Tanbur       0.91      0.91      0.91       314
+                 instrument--Ney       0.96      0.86      0.90       309
+instrument--performing orchestra       0.91      0.85      0.88       250
+                 instrument--Oud       0.98      0.83      0.90       247
+   instrument--Classical kemençe       0.90      0.86      0.88       254
+               instrument--Cello       0.88      0.86      0.87       171
+              instrument--Violin       0.98      0.85      0.91       177
+                     usul--Aksak       0.50      0.04      0.07       106
+                    makam--Hicaz       1.00      0.13      0.24       126
+          instrument--Percussion       0.92      0.78      0.84       112
+                     usul--Düyek       0.40      0.02      0.04        94
+                usul--Aksaksemai       0.58      0.08      0.15        84
+                 makam--Nihavent       0.31      0.07      0.11        73
+                   makam--Hüzzam       0.71      0.15      0.25        65
+            instrument--Clarinet       0.94      0.73      0.82        60
+                   usul--Curcuna       0.00      0.00      0.00        58
+          makam--Kürdilihicazkar       1.00      0.02      0.04        50
+              instrument--Bendir       0.96      0.69      0.80        65
+                    makam--Uşşak       0.00      0.00      0.00        60
+                     makam--Rast       0.00      0.00      0.00        42
+               instrument--Kudüm       1.00      0.71      0.83        49
+               instrument--Viola       0.97      0.71      0.82        42
+                usul--Yürüksemai       1.00      0.02      0.04        44
+                    usul--Sofyan       1.00      0.04      0.08        49
+                    makam--Segah       0.00      0.00      0.00        41
+                 usul--Ağıraksak       0.00      0.00      0.00        41
+                  makam--Hüseyni       0.00      0.00      0.00        29
+              usul--Devr-i Kebir       0.80      0.14      0.24        28
+
+                       micro avg       0.94      0.67      0.78      4011
+                       macro avg       0.69      0.41      0.45      4011
+                    weighted avg       0.84      0.67      0.71      4011
+                     samples avg       0.91      0.65      0.73      4011
+

@@ -1,0 +1,33 @@
+
+Evaluation of model "ast_from_lyra" on "fma" test set:
+ROC-AUC score: 0.9243972436167889
+PR-AUC score: 0.5373006467328258
+
+                    precision    recall  f1-score   support
+
+              Rock       0.84      0.83      0.84      1396
+        Electronic       0.78      0.79      0.79      1259
+              Punk       0.67      0.66      0.66       649
+      Experimental       0.72      0.34      0.47       441
+           Hip-Hop       0.84      0.78      0.81       446
+              Folk       0.74      0.47      0.58       325
+            Garage       0.47      0.57      0.52       280
+      Instrumental       0.64      0.28      0.39       275
+        Indie-Rock       0.50      0.06      0.11       263
+               Pop       0.36      0.02      0.04       247
+        Chip Music       0.82      0.77      0.80       181
+Ambient Electronic       0.70      0.03      0.07       203
+     International       0.81      0.62      0.70       224
+               IDM       0.50      0.08      0.14       192
+            Techno       0.57      0.09      0.15       145
+         Downtempo       0.41      0.08      0.14       159
+        Soundtrack       0.67      0.21      0.31       175
+          Chiptune       0.66      0.76      0.70       123
+             House       0.00      0.00      0.00       132
+          Hardcore       0.81      0.21      0.34       118
+
+         micro avg       0.75      0.55      0.63      7233
+         macro avg       0.62      0.38      0.43      7233
+      weighted avg       0.70      0.55      0.58      7233
+       samples avg       0.57      0.50      0.51      7233
+
