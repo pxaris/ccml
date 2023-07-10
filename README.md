@@ -20,7 +20,11 @@ PyTorch implementation of cross-cultural music transfer learning using auto-tagg
   - metadata: they have been copied to the directory `data/lyra/split/` from the dataset repository.
 - [**Turkish-makam**](https://dunya.compmusic.upf.edu/makam/), [**Hindustani**](https://dunya.compmusic.upf.edu/hindustani/), [**Carnatic**](https://dunya.compmusic.upf.edu/carnatic/)
   - These datasets are part of the [CompMusic Corpora](https://compmusic.upf.edu/corpora). One should create an account to [Dunya](https://dunya.compmusic.upf.edu/) and request access to the audio files. 
-  - The [pycompmusic](https://github.com/MTG/pycompmusic) has to be installed and the user `token` must be used at the helper scripts under `preprocessing/dunya/` directory. In order to fetch both data and metadata, set the `dataset` option properly (one of `'makam', 'hindustani', 'carnatic'`) and execute the scripts such as: `python preprocessing/dunya/get_audios.py --dataset 'makam'` and `python preprocessing/dunya/get_metadata.py --dataset 'carnatic'`.
+  - The [pycompmusic](https://github.com/MTG/pycompmusic) has to be installed and the user `token` must be used at the helper scripts under `preprocessing/dunya/` directory. In order to fetch both data and metadata, set the `dataset` option properly (one of `'makam', 'hindustani', 'carnatic'`) and execute the scripts such as:
+```bash
+python preprocessing/dunya/get_audios.py --dataset 'makam'
+python preprocessing/dunya/get_metadata.py --dataset 'carnatic'
+```
 
 The metadata are supposed to be under `data/{dataset}/split/` directory at the files `binary.npy` for MagnaTagATune, `training.tsv` and `test.tsv` for Lyra and `metadata.npy` for the rest of the datasets.
 
