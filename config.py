@@ -229,7 +229,10 @@ MODELS_CONFIG = {
     }
 }
 
-# add Transfer Learning configs to models config dict
+# add Transfer Learning configs to models config dict, for all models and datasets
+# e.g. for Lyra dataset, configurations will be added such as 'ast_from_makam' 
+# (fine-tuning on all AST model that was previously trained on Turkish-makam),
+# 'ast_from_makam_f' (same but fine-tuning only on final layer), 'musicnn_from_carnatic' etc.
 datasets = MODELS_CONFIG.keys()
 models = ['vgg_ish', 'musicnn', 'ast']
 
