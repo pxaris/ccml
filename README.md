@@ -11,10 +11,10 @@ PyTorch implementation of cross-cultural music transfer learning using auto-tagg
 
 - [**MagnaTagATune**](https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset)
   - audios: they can be downloaded from the dataset webpage.
-  - metadata: the (binary) labels for the top-50 tags are stored in `data/magnatagatune/split/binary.npy` and they can be found also at [minzwon/sota-music-tagging-models](https://github.com/minzwon/sota-music-tagging-models/tree/master/split/mtat) repository.
+  - metadata: the (binary) labels for the top-50 tags are stored in `data/magnatagatune/split/binary.npy` and they can be also found at [minzwon/sota-music-tagging-models](https://github.com/minzwon/sota-music-tagging-models/tree/master/split/mtat) repository.
 - [**FMA**](https://github.com/mdeff/fma)
   - audios: they can be downloaded from the dataset repository for the FMA-medium dataset that is used in this study.
-  - metadata: the top-20 hierarchically related genres annotation (available in dataset repository) was utilized to create the `data/fma/split/metadata.npy` file which contains a dictionary where keys are the track ids and values are the repective labels. 
+  - metadata: the top-20 hierarchically related genre labels (available in dataset repository) were utilized to create the `data/fma/split/metadata.npy` file which contains a dictionary where keys are the track ids and values are the repective labels. 
 - [**Lyra**](https://github.com/pxaris/lyra-dataset)
   - audios: they are not publicly available but the mel-spectrograms can be downloaded from the dataset repository.
   - metadata: they have been copied to the directory `data/lyra/split/` from the dataset repository.
@@ -29,7 +29,7 @@ python preprocessing/dunya/get_metadata.py --dataset 'carnatic'
 The metadata are supposed to be under `data/{dataset}/split/` directory at the files `binary.npy` for MagnaTagATune, `training.tsv` and `test.tsv` for Lyra and `metadata.npy` for the rest of the datasets.
 
 Regarding **splits**, the analogies 0.7/0.1/0.2 for training, validation and test sets are used across all datasets. Specifically: 
-- MagnaTagATune: the publicly available split is used. It can be found at [minzwon/sota-music-tagging-models](https://github.com/minzwon/sota-music-tagging-models/tree/master/split/mtat) repository.
+- MagnaTagATune: the publicly available split is used. It can be found in at several repositories, e.g. [here](https://github.com/minzwon/sota-music-tagging-models/tree/master/split/mtat).
 - Lyra: The [publicly available split](https://github.com/pxaris/lyra-dataset/tree/main/data/split) for training and test sets is used. The validation set is randomly splitted from the training set during training.
 - For the rest of the datasets - FMA-medium, Turkish-makam, Hindustani and Carnatic - random split was applied and the result was stored in the files `train.npy`, `valid.npy` and `test.npy` under each `data/{dataset}/split` directory, for reproducibility. Each one of those files contains a **list of ids** that is used, in turn, by the respective dataloader. 
 
@@ -57,14 +57,14 @@ The mel-spectrograms will be generated under the respective `{data_dir}/mel-spec
 
 ## Training
 
-The available deep learning models are [**VGG-ish**](https://arxiv.org/abs/2006.00751), [**Musicnn**](https://arxiv.org/abs/1711.02520), [**Audio Spectrogram Transformer (AST)**](https://arxiv.org/abs/2104.01778). 
+The available deep learning models are [**VGG-ish**](https://arxiv.org/abs/2006.00751), [**Musicnn**](https://arxiv.org/abs/1711.02520) and [**Audio Spectrogram Transformer (AST)**](https://arxiv.org/abs/2104.01778). 
 
 Specify:
 - `{dataset}` as one of `'magnatagatune', 'fma', 'makam', 'lyra', 'hindustani', 'carnatic'`
 - `{data_dir}` where the `mel-spectrograms` and `split` dirs are expected to be found
 - `{model_name}` which will load the respective configuration from `MODELS_CONFIG` at `config.py`
   - use one of `'vgg_ish', 'musicnn', 'ast'` for models that no transfer learning is taking place
-- `{device}` to be used
+- `{device}` to be used (one of `'cpu', 'cuda:0', 'cuda:1'` etc.)
 
 example:
 ```bash
@@ -73,7 +73,7 @@ python train.py --dataset 'magnatagatune' --data_dir '/__path_to__/magnatagatune
 
 ### Transfer Learning
 
-Once training of a model has been completed on a dataset, it can be used to apply transfer learning to another by using the following conventions for `{model_name}` option:
+Once training of a model has been completed on a dataset, it can be used to apply transfer learning to another by using the following conventions for the `{model_name}` option:
 - `{model}_from_{dataset}` when fine-tuning on the whole network will be applied
 - `{model}_from_{dataset}_f` when fine-tuning only of the final layer will take place
 
@@ -82,7 +82,7 @@ Assuming that a `vgg_ish` model is trained on `fma` and one wishes to transfer i
 python train.py --dataset 'hindustani' --data_dir '/__path_to__/hindustani' --model_name 'vgg_ish_from_fma' --device 'cuda:0'
 ```
 
-When transferring a `musicnn` model from `'lyra'` to `'makam'` dataset and fine-tune only the final layer, one would run: 
+In order to transfer a `musicnn` model from `'lyra'` to `'makam'` dataset and fine-tune only the final layer, one would run: 
 ```bash
 python train.py --dataset 'makam' --data_dir '/__path_to__/makam' --model_name 'musicnn_from_lyra_f' --device 'cuda:0'
 ```
@@ -101,4 +101,4 @@ or for a transfer learning model:
 python evaluate.py --dataset 'lyra' --data_dir '/__path_to__/lyra' --model_name 'musicnn_from_magnatagatune' --device 'cuda:0'
 ```
 
-The result will be stored under `evaluation/{dataset}/` directory to a `{model_name}.txt` file. The evaluation results of the single-domain models and the best transfer learning models are being provided for reference purposes.   
+The result will be stored under `evaluation/{dataset}/` directory to a `{model_name}.txt` file. The evaluation results of the single-domain and the best transfer learning models are being provided for reference purposes.   
