@@ -86,3 +86,19 @@ When transferring a `musicnn` model from `'lyra'` to `'makam'` dataset and fine-
 ```bash
 python train.py --dataset 'makam' --data_dir '/__path_to__/makam' --model_name 'musicnn_from_lyra_f' --device 'cuda:0'
 ```
+
+## Evaluation
+
+For evaluating a model, the same options need to be specified, i.e. `{dataset}`, `{data_dir}`, `{model_name}` and `{device}`.
+
+example for a single-domain model:
+```bash
+python evaluate.py --dataset 'fma' --data_dir '/__path_to__/fma' --model_name 'ast' --device 'cuda:0'
+```
+
+or for a transfer learning model:
+```bash
+python evaluate.py --dataset 'lyra' --data_dir '/__path_to__/lyra' --model_name 'musicnn_from_magnatagatune' --device 'cuda:0'
+```
+
+The result will be stored under `evaluation/{dataset}/` directory to a `{model_name}.txt` file. The evaluation results of the single-domain models and the best transfer learning models are being provided for reference purposes.   
