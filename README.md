@@ -53,5 +53,36 @@ In order to create the `mel-spectrograms` for all datasets except Lyra (for whic
 python preprocessing/create_mel_spectrograms.py --dataset 'magnatagatune' --data_dir '/__path_to__/magnatagatune'
 ```
 
-The mel-spectrograms, that is used by all models for their input, will be generated under the respective `{data_dir}/mel-spectrograms/` directory for each dataset and they will follow the `{id}.npy` naming convention.
+The mel-spectrograms will be generated under the respective `{data_dir}/mel-spectrograms/` directory and they will follow the `{id}.npy` naming convention.
 
+## Training
+
+The available deep learning models are [**VGG-ish**](https://arxiv.org/abs/2006.00751), [**Musicnn**](https://arxiv.org/abs/1711.02520), [**Audio Spectrogram Transformer (AST)**](https://arxiv.org/abs/2104.01778). 
+
+Specify:
+- `{dataset}` as one of `'magnatagatune', 'fma', 'makam', 'lyra', 'hindustani', 'carnatic'`
+- `{data_dir}` where the `mel-spectrograms` and `split` dirs are expected to be found
+- `{model_name}` which will load the respective configuration from `MODELS_CONFIG` at `config.py`
+  - use one of `'vgg_ish', 'musicnn', 'ast'` for models that no transfer learning is taking place
+- `{device}` to be used
+
+example:
+```bash
+python train.py --dataset 'magnatagatune' --data_dir '/__path_to__/magnatagatune' --model_name 'ast' --device 'cuda:0'
+```
+
+### Transfer Learning
+
+Once training of a model has been completed on a dataset, it can be used to apply transfer learning to another by using the following conventions for `{model_name}` option:
+- `{model}_from_{dataset}` when fine-tuning on the whole network will be applied
+- `{model}_from_{dataset}_f` when fine-tuning only of the final layer will take place
+
+Assuming that a `vgg_ish` model is trained on `fma` and one wishes to transfer it to `hindustani` and fine-tune the whole network, the command will be:
+```bash
+python train.py --dataset 'hindustani' --data_dir '/__path_to__/hindustani' --model_name 'vgg_ish_from_fma' --device 'cuda:0'
+```
+
+When transferring a `musicnn` model from `'lyra'` to `'makam'` dataset and fine-tune only the final layer, one would run: 
+```bash
+python train.py --dataset 'makam' --data_dir '/__path_to__/makam' --model_name 'musicnn_from_lyra_f' --device 'cuda:0'
+```
