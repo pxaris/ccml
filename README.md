@@ -8,30 +8,17 @@ PyTorch implementation of cross-cultural music transfer learning using auto-tagg
 - Charilaos Papaioannou, Emmanouil Benetos, and Alexandros Potamianos
 
 ## Datasets
+
 - [**MagnaTagATune**](https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset)
-- [**FMA**](https://github.com/mdeff/fma)
-- [**Lyra**](https://github.com/pxaris/lyra-dataset)
-- [**Turkish-makam**](https://dunya.compmusic.upf.edu/makam/)
-- [**Hindustani**](https://dunya.compmusic.upf.edu/hindustani/)
-- [**Carnatic**](https://dunya.compmusic.upf.edu/carnatic/)
-
-## Models
-- **VGG-ish** : CNN architecture with multiple layers based on the VGG network, as implemented by [Won et al.](https://arxiv.org/abs/2006.00751)
-- **Musicnn** : Music inspired model that uses convolutional layers at its core, [Pons et al.](https://arxiv.org/abs/1711.02520)
-- **Audio Spectrogram Transformer** : Purely attention-based model for audio classification, [Gong et al.](https://arxiv.org/abs/2104.01778)
-
-## Data sources
-
-- MagnaTagATune
-  - audios: they can be downloaded from the [dataset webpage](https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset).
+  - audios: they can be downloaded from the dataset webpage.
   - metadata: the (binary) labels for the top-50 tags are stored in `data/magnatagatune/split/binary.npy` and they can be found also at [minzwon/sota-music-tagging-models](https://github.com/minzwon/sota-music-tagging-models/tree/master/split/mtat) repository.
-- FMA
-  - audios: they can be downloaded from the [dataset repository](https://github.com/mdeff/fma) for the FMA-medium dataset that is used in this study.
+- [**FMA**](https://github.com/mdeff/fma)
+  - audios: they can be downloaded from the dataset repository for the FMA-medium dataset that is used in this study.
   - metadata: the top-20 hierarchically related genres annotation (available in dataset repository) was utilized to create the `data/fma/split/metadata.npy` file which contains a dictionary where keys are the track ids and values are the repective labels. 
-- Lyra
-  - audios: they are not publicly available but the mel-spectrograms can be downloaded from the [dataset repository](https://github.com/pxaris/lyra-dataset)
+- [**Lyra**](https://github.com/pxaris/lyra-dataset)
+  - audios: they are not publicly available but the mel-spectrograms can be downloaded from the dataset repository.
   - metadata: they have been copied to the directory `data/lyra/split/` from the dataset repository.
-- Turkish-makam, Hindustani, Carnatic
+- [**Turkish-makam**](https://dunya.compmusic.upf.edu/makam/), [**Hindustani**](https://dunya.compmusic.upf.edu/hindustani/), [**Carnatic**](https://dunya.compmusic.upf.edu/carnatic/)
   - These datasets are part of the [CompMusic Corpora](https://compmusic.upf.edu/corpora). One should create an account to [Dunya](https://dunya.compmusic.upf.edu/) and request access to the audio files. 
   - The [pycompmusic](https://github.com/MTG/pycompmusic) has to be installed and the user `token` must be used at the helper scripts under `preprocessing/dunya/` directory. In order to fetch both data and metadata, set the `dataset` option properly (one of `'makam', 'hindustani', 'carnatic'`) and execute the scripts such as: `python preprocessing/dunya/get_audios.py --dataset 'makam'` and `python preprocessing/dunya/get_metadata.py --dataset 'carnatic'`.
 
@@ -54,13 +41,13 @@ pip install -r requirements.txt
 
 ## Preprocessing
 
-The audio (mp3) files of each dataset are expected to be found under `audios/` directory at a specific path such as `data/{dataset}/`. 
+The audio (mp3) files of each dataset are expected to be found under `audios/` directory at a specific path (let's say `{data_dir}`) such as `/__path_to__/data/{dataset}/`. 
 
-In order to create the `mel-spectrograms` for all datasets except Lyra (for which they can be readily downloaded), the following command na be used by setting properly the `dataset` (use one of `'magnatagatune', 'fma', 'makam', 'hindustani', 'carnatic'`) and `data_dir` (full path to the dataset directory) options, such as:
+In order to create the `mel-spectrograms` for all datasets except Lyra (for which they can be readily downloaded), the following command can be used by setting properly the `dataset` (use one of `'magnatagatune', 'fma', 'makam', 'hindustani', 'carnatic'`) and `data_dir` (full path to the dataset directory) options, such as:
 
 ```bash
-python preprocessing/create_mel_spectrograms.py --dataset 'magnatagatune' --data_dir '/__path_to__/data/magnatagatune'
+python preprocessing/create_mel_spectrograms.py --dataset 'magnatagatune' --data_dir '/__path_to__/magnatagatune'
 ```
 
-The mel-spectrograms, that is used by all models for their input, will be generated under the respective `data/{dataset}/mel-spectrograms/` directory following the `{id}.npy` naming convention.
+The mel-spectrograms, that is used by all models for their input, will be generated under the respective `{data_dir}/mel-spectrograms/` directory for each dataset and they will follow the `{id}.npy` naming convention.
 
