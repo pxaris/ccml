@@ -4,7 +4,7 @@ PyTorch implementation of cross-cultural music transfer learning using auto-tagg
 
 ## Reference
 
-**From West to East: Who can understand the music of the others better?**, ISMIR 2023.  
+[**From West to East: Who can understand the music of the others better?**](https://arxiv.org/abs/2307.09795), ISMIR 2023.  
 - Charilaos Papaioannou, Emmanouil Benetos, and Alexandros Potamianos
 
 ## Datasets
