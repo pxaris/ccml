@@ -10,13 +10,13 @@ PyTorch implementation of cross-cultural music transfer learning using auto-tagg
 ## Datasets
 
 - [**MagnaTagATune**](https://mirg.city.ac.uk/codeapps/the-magnatagatune-dataset)
-  - audios: they can be downloaded from the dataset webpage.
+  - audio: the files can be downloaded from the dataset webpage.
   - metadata: the (binary) labels for the top-50 tags are stored in `data/magnatagatune/split/binary.npy` and they can be also found at [minzwon/sota-music-tagging-models](https://github.com/minzwon/sota-music-tagging-models/tree/master/split/mtat) repository.
 - [**FMA**](https://github.com/mdeff/fma)
-  - audios: they can be downloaded from the dataset repository for the FMA-medium dataset that is used in this study.
+  - audio: the files can be downloaded from the dataset repository for the FMA-medium dataset that is used in this study.
   - metadata: the top-20 hierarchically related genre labels (available in dataset repository) were utilized to create the `data/fma/split/metadata.npy` file which contains a dictionary where keys are the track ids and values are the repective labels. 
 - [**Lyra**](https://github.com/pxaris/lyra-dataset)
-  - audios: they are not publicly available but the mel-spectrograms can be downloaded from the dataset repository.
+  - audio: the audio files are not publicly available but the mel-spectrograms can be downloaded from the dataset repository.
   - metadata: they have been copied to the directory `data/lyra/split/` from the dataset repository.
 - [**Turkish-makam**](https://dunya.compmusic.upf.edu/makam/), [**Hindustani**](https://dunya.compmusic.upf.edu/hindustani/), [**Carnatic**](https://dunya.compmusic.upf.edu/carnatic/)
   - These datasets are part of the [CompMusic Corpora](https://compmusic.upf.edu/corpora). One should create an account to [Dunya](https://dunya.compmusic.upf.edu/) and request access to the audio files. 
