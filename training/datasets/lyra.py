@@ -84,7 +84,7 @@ class LyraDataset(Dataset):
         return [np.load(spectrogram_file).T]
 
     def get_ids_labels(self, annotations_file):
-        data_df = pd.read_csv(annotations_file, sep='\t')
+        data_df = pd.read_csv(annotations_file, sep='\t', keep_default_na=False)
         ids, labels = [], []
         for _, row in data_df.iterrows():
             ids.append(row['id'])
