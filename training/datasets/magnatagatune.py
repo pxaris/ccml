@@ -31,10 +31,18 @@ class Magnatagatune(Dataset):
             self.split_path, f'{keyword}.npy'))
         self.tags_binary = np.load(os.path.join(self.split_path, 'binary.npy'))
         self.len_labels = len(self.tags_binary[0])
+        self.ids = self.get_ids()
 
     def __getitem__(self, item):
         spectrogram, tags_binary = self.get_spectrogram_and_tags(item)
         return spectrogram.astype('float32'), tags_binary.astype('float32')
+    
+    def get_ids(self):
+        ids = []
+        for line in self.files_list:
+            id, _ = line.split('\t')
+            ids.append(id)
+        return ids
 
     def get_spectrogram_and_tags(self, item):
         index, file_path = self.files_list[item].split('\t')
