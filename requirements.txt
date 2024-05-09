@@ -3,7 +3,7 @@ torch==1.13.1
 imblearn==0.0
 matplotlib==3.5.1
 librosa==0.9.1
-tqdm==4.64.1
+tqdm==4.66.3
 torchaudio==0.13.1
 torchvision==0.14.1
 pandas==1.4.0
